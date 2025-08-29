@@ -69,6 +69,6 @@ El código implementa perceptrones simples en Wolfram Language para simular comp
 
 
 ### Referencias
-[¿Qué es una red neuronal? (2025, febrero 21). IBM](https://www.ibm.com/es-es/think/topics/neural-networks)
-[Compuertas lógicas – Sistemas Digitales. (s/f). Unam.mx](https://virtual.cuautitlan.unam.mx/intar/sistdig/compuertas-logicas/)
+- [¿Qué es una red neuronal? (2025, febrero 21). IBM](https://www.ibm.com/es-es/think/topics/neural-networks)
+- [Compuertas lógicas – Sistemas Digitales. (s/f). Unam.mx](https://virtual.cuautitlan.unam.mx/intar/sistdig/compuertas-logicas/)
 
