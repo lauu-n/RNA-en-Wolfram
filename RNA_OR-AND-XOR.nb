@@ -1,38 +1,32 @@
-Notebook[{Cell[
-BoxData[{RowBox[{RowBox[{"(*"," ",RowBox[{"Funci\[OAcute]n"," ","escal\[OAcute]n"}]," ","*)"}],"\n",RowBox[
-{RowBox[{"stepFunction","[",RowBox[{"x_","?","NumericQ"}],"]"}]," ",":="," ",RowBox[
-{"If","[",RowBox[{RowBox[{"x"," ",">"," ","0"}],","," ","1",","," ","0"}],"]"}]}]}],RowBox[
-{"\n","\n"}],RowBox[{RowBox[{"(*"," ",RowBox[{"COMPUERTA"," ","AND"}]," ","*)"}],"\n",RowBox[
-{RowBox[{"perceptronAND","[",RowBox[{"{",RowBox[{"x1_",","," ","x2_"}],"}"}],"]"}]," ",":="," ",RowBox[
-{"stepFunction","[",RowBox[{RowBox[{"x1","*","1"}]," ","+"," ",RowBox[{"x2","*","1"}]," ","-"," ","1.5"}],"]"}]}]}],RowBox[
-{"\n","\n"}],RowBox[{RowBox[{"testInputs"," ","="," ",RowBox[{"{",RowBox[{RowBox[
-{"{",RowBox[{"0",","," ","0"}],"}"}],","," ",RowBox[{"{",RowBox[{"0",","," ","1"}],"}"}],","," ",RowBox[
-{"{",RowBox[{"1",","," ","0"}],"}"}],","," ",RowBox[{"{",RowBox[{"1",","," ","1"}],"}"}]}],"}"}]}],";"}],"\n",RowBox[
-{RowBox[{"outputsAND"," ","="," ",RowBox[{"perceptronAND"," ","@@@"," ","testInputs"}]}],";"}],"\n",RowBox[
-{RowBox[{"Print","[",RowBox[{"\"Tabla de verdad AND: \"",","," ",RowBox[{"Thread","[",RowBox[
-{"testInputs"," ","\[Rule]"," ","outputsAND"}],"]"}]}],"]"}],";"}],RowBox[{"\n","\n"}],RowBox[
-{RowBox[{"(*"," ",RowBox[{"COMPUERTA"," ","OR"}]," ","*)"}],"\n",RowBox[{RowBox[{"perceptronOR","[",RowBox[
-{"{",RowBox[{"x1_",","," ","x2_"}],"}"}],"]"}]," ",":="," ",RowBox[{"stepFunction","[",RowBox[
-{RowBox[{"x1","*","1"}]," ","+"," ",RowBox[{"x2","*","1"}]," ","-"," ","0.5"}],"]"}]}]}],RowBox[
-{"\n","\n"}],RowBox[{RowBox[{"outputsOR"," ","="," ",RowBox[{"perceptronOR"," ","@@@"," ","testInputs"}]}],";"}],"\n",RowBox[
-{RowBox[{"Print","[",RowBox[{"\"Tabla de verdad OR: \"",","," ",RowBox[{"Thread","[",RowBox[
-{"testInputs"," ","\[Rule]"," ","outputsOR"}],"]"}]}],"]"}],";"}],RowBox[{"\n","\n"}],RowBox[
-{RowBox[{"(*"," ",RowBox[{RowBox[{"COMPUERTA"," ",RowBox[{RowBox[{RowBox[{RowBox[
-{RowBox[{RowBox[{RowBox[{RowBox[{"XOR"," ","--"}],"--"}],"--"}],"--"}],"--"}],"--"}],"--"}],"--"}]}],"-"}]," ","*)"}],"\n",RowBox[
-{"(*"," ",RowBox[{RowBox[{"XOR"," ","no"," ","es"," ","linealmente"," ","separable"}],","," ",RowBox[
-{"se"," ","construye"," ","con"," ","dos"," ",RowBox[{"capas",":","\n","   ",RowBox[
-{"Capa"," ","oculta"," ","con"," ","dos"," ","neuronas"," ","que"," ","hacen"," ","OR"," ","y"," ","NAND"}]}]}],",","\n","   ",RowBox[
-{"y"," ","salida"," ","como"," ","AND"," ","de"," ","esas"," ",RowBox[{"dos","."}]}]}]," ","*)"}],"\n","\n",RowBox[
-{RowBox[{"perceptronNAND","[",RowBox[{"{",RowBox[{"x1_",","," ","x2_"}],"}"}],"]"}]," ",":="," ",RowBox[
-{"stepFunction","[",RowBox[{RowBox[{RowBox[{"-","x1"}],"*","1"}]," ","-"," ",RowBox[
-{"x2","*","1"}]," ","+"," ","1.5"}],"]"}]}]}],RowBox[{"\n","\n"}],RowBox[{RowBox[
-{"perceptronXOR","[",RowBox[{"{",RowBox[{"x1_",","," ","x2_"}],"}"}],"]"}]," ",":="," ",RowBox[
-{"Module","[","\n","  ",RowBox[{RowBox[{"{",RowBox[{"h1",","," ","h2"}],"}"}],",","\n","  ",RowBox[
-{RowBox[{"h1"," ","="," ",RowBox[{"perceptronOR","[",RowBox[{"{",RowBox[{"x1",","," ","x2"}],"}"}],"]"}]}],";","\n","  ",RowBox[
-{"h2"," ","="," ",RowBox[{"perceptronNAND","[",RowBox[{"{",RowBox[{"x1",","," ","x2"}],"}"}],"]"}]}],";","\n","  ",RowBox[
-{"perceptronAND","[",RowBox[{"{",RowBox[{"h1",","," ","h2"}],"}"}],"]"}]}]}],"\n","]"}]}],RowBox[
-{"\n","\n"}],RowBox[{RowBox[{"outputsXOR"," ","="," ",RowBox[{"perceptronXOR"," ","@@@"," ","testInputs"}]}],";"}],"\n",RowBox[
-{RowBox[{RowBox[{"Print","[",RowBox[{"\"Tabla de verdad XOR: \"",","," ",RowBox[{"Thread","[",RowBox[
-{"testInputs"," ","\[Rule]"," ","outputsXOR"}],"]"}]}],"]"}],";"}],"\n"}]}],"Input",
-ExpressionUUID -> "311aa6f4-22fb-4e69-aa59-6fcdbe201815"]},StyleDefinitions -> "Default.nb",
-FrontEndVersion -> "14.3 for Wolfram Cloud 1.73 (July 23, 2025)"]
+(* Función escalón *)
+stepFunction[x_?NumericQ] := If[x > 0, 1, 0]
+
+(* COMPUERTA AND *)
+perceptronAND[{x1_, x2_}] := stepFunction[x1*1 + x2*1 - 1.5]
+
+testInputs = {{0, 0}, {0, 1}, {1, 0}, {1, 1}};
+outputsAND = perceptronAND @@@ testInputs;
+Print["Tabla de verdad AND: ", Thread[testInputs -> outputsAND]];
+
+(* COMPUERTA OR *)
+perceptronOR[{x1_, x2_}] := stepFunction[x1*1 + x2*1 - 0.5]
+
+outputsOR = perceptronOR @@@ testInputs;
+Print["Tabla de verdad OR: ", Thread[testInputs -> outputsOR]];
+
+(* COMPUERTA XOR ----------------- *)
+(* XOR no es linealmente separable, se construye con dos capas:
+   Capa oculta con dos neuronas que hacen OR y NAND,
+   y salida como AND de esas dos. *)
+
+perceptronNAND[{x1_, x2_}] := stepFunction[-x1*1 - x2*1 + 1.5]
+
+perceptronXOR[{x1_, x2_}] := Module[
+  {h1, h2},
+  h1 = perceptronOR[{x1, x2}];
+  h2 = perceptronNAND[{x1, x2}];
+  perceptronAND[{h1, h2}]
+]
+
+outputsXOR = perceptronXOR @@@ testInputs;
+Print["Tabla de verdad XOR: ", Thread[testInputs -> outputsXOR]];
