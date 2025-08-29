@@ -52,8 +52,8 @@ Este proyecto implementa Redes Neuronales Artificiales (RNA) simples en Wolfram 
 
 ## Descripción 
 
-El código implementa perceptrones simples en Wolfram Language para simular compuertas lógicas:
-- Función escalón (stepFunction): define la activación de las neuronas, devolviendo 0 o 1 según el valor de entrada.
+El código implementa perceptrones en Wolfram Language para simular compuertas lógicas:
+- Función (stepFunction): define la activación de las neuronas, devolviendo 0 o 1 según el valor de entrada.
 - Compuertas AND y OR: implementadas con un único perceptrón, utilizando combinaciones lineales de las entradas y un umbral.
 - Compuerta XOR: construida a partir de la combinación de dos perceptrones ocultos (OR y NAND) y una neurona de salida (AND).
 - Generación de tablas de verdad: el código evalúa todas las combinaciones de entrada y muestra las salidas correspondientes de cada compuerta.
