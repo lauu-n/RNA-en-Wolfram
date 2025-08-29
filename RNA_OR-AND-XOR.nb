@@ -1,6 +1,7 @@
 (* Función escalón *)
 stepFunction[x_?NumericQ] := If[x > 0, 1, 0]
 
+
 (* COMPUERTA AND *)
 perceptronAND[{x1_, x2_}] := stepFunction[x1*1 + x2*1 - 1.5]
 
@@ -8,17 +9,15 @@ testInputs = {{0, 0}, {0, 1}, {1, 0}, {1, 1}};
 outputsAND = perceptronAND @@@ testInputs;
 Print["Tabla de verdad AND: ", Thread[testInputs -> outputsAND]];
 
+
 (* COMPUERTA OR *)
 perceptronOR[{x1_, x2_}] := stepFunction[x1*1 + x2*1 - 0.5]
 
 outputsOR = perceptronOR @@@ testInputs;
 Print["Tabla de verdad OR: ", Thread[testInputs -> outputsOR]];
 
-(* COMPUERTA XOR ----------------- *)
-(* XOR no es linealmente separable, se construye con dos capas:
-   Capa oculta con dos neuronas que hacen OR y NAND,
-   y salida como AND de esas dos. *)
 
+(* COMPUERTA XOR ----------------- *)
 perceptronNAND[{x1_, x2_}] := stepFunction[-x1*1 - x2*1 + 1.5]
 
 perceptronXOR[{x1_, x2_}] := Module[
