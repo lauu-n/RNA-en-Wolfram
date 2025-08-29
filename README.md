@@ -25,7 +25,6 @@ Este proyecto implementa Redes Neuronales Artificiales (RNA) simples en Wolfram 
 |   1   |   0   |     0    |
 |   1   |   1   |     1    |
 
-----
 
 ### OR
 |  x_1  |  x_2  |  Salida  |
@@ -35,7 +34,6 @@ Este proyecto implementa Redes Neuronales Artificiales (RNA) simples en Wolfram 
 |   1   |   0   |     1    |
 |   1   |   1   |     1    |
 
-----
 
 ### XOR
 |  x_1  |  x_2  |  Salida  |
@@ -44,3 +42,13 @@ Este proyecto implementa Redes Neuronales Artificiales (RNA) simples en Wolfram 
 |   0   |   1   |     1    |
 |   1   |   0   |     1    |
 |   1   |   1   |     0    |
+
+
+## Ejecución
+1. Abrir ``` RNA_OR-AND-XOR.nb ``` en Wolfram Mathematica.
+2. Evaluar las celdas (``` ctrl + Shift + Enter ```).
+3. Ver resultados y predicciones de cada compuerta.
+
+## Resultados
+- Para AND y OR, la red aprende rápido y predice sin error.
+- Para XOR, la red necesita más neuronas, pero finalmente logra clasificar correctamente.
