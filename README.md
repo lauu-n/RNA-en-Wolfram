@@ -17,7 +17,7 @@ Este proyecto implementa Redes Neuronales Artificiales (RNA) simples en Wolfram 
 
 ## Requisitos
 
-- Wolfram Mathematica o Engine
+- Wolfram
 - Archivo en formato ``` .nb ```
 
 
