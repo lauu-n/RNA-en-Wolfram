@@ -9,7 +9,7 @@ Este proyecto implementa Redes Neuronales Artificiales (RNA) simples en Wolfram 
 - Las compuertas lógicas son un ejemplo para entender cómo las RNA pueden modelar funciones booleanas. Las compuertas AND y OR son problemas linealmente separables, lo que significa que pueden resolverse con un solo perceptrón (una capa). En cambio, la compuerta XOR es un problema no linealmente separable, lo que requiere al menos dos capas o una combinación de perceptrones.
 
 
-## Objetivo
+## Objetivos
 
 - Mostrar cómo entrenar una red neuronal con datos básicos de verdad.
 - Comparar la capacidad de la RNA para aprender compuertas separables linealmente (AND, OR) y no lineal (XOR)
